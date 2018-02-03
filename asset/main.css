@@ -1,0 +1,377 @@
+@import url(//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+html, body, div, p {
+    margin: 0;
+    font: inherit;
+}
+body{
+    font-family: "Lucida Grande", Lucida Sans Unicode, WenQuanYi Micro Hei, Verdana, Aril, Dengxian, Hiragino Sans GB, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    height:100%;
+    background-image: url("bg.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+
+}
+p{
+    text-align: center;
+}
+h1{
+    padding-top: 1rem;
+    color:white;
+    text-align: center;
+    font-size: 2rem;
+}
+h2,h3{
+    text-align: center;
+    padding: 2rem;
+    margin-top:0;
+}
+h2{
+    padding-top: 5rem;
+}
+.mainbox{
+    height: 30rem;
+    background-color:white;
+    padding: 0;
+}
+.loading{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color:#000;
+    filter:alpha(opacity=60); /*IE*/
+    -moz-opacity:0.6; /*old Mozilla*/
+    -khtml-opacity: 0.6; /*old Safari*/
+    opacity: 0.6; /*Chrome, Opera, Safari*/
+    z-index: 100;
+}
+#left-box{
+    background-color: dimgray;
+    height: 100%;
+    padding: 0;
+}
+#right-box{
+    background-color: white;
+    height: 100%;
+    padding: 0;
+}
+#logo-box{
+    /*background-color: blue;*/
+    height: 50%;
+    padding: 4rem;
+}
+#about{
+    /*background-color: antiquewhite;*/
+    height: 50%;
+}
+#logo{
+    /*background-color: aquamarine;*/
+    height: 100%;
+}
+#test{
+    height: 8rem;
+}
+#logo-text{
+    padding-top: 1.5rem;
+    color: white;
+    font-size: 1rem;
+}
+
+/* loading */
+
+.spinner {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-30px;
+    margin-top:-40px; /* F**k居中怎么这么麻烦...  233333*/
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #67CF22;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+/* icon flash */
+
+a {
+    -moz-transition: color 0.2s ease, border-color 0.2s ease;
+    -webkit-transition: color 0.2s ease, border-color 0.2s ease;
+    -ms-transition: color 0.2s ease, border-color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    color: inherit;
+    text-decoration: none;
+}
+
+    a:before {
+        -moz-transition: color 0.2s ease, text-shadow 0.2s ease;
+        -webkit-transition: color 0.2s ease, text-shadow 0.2s ease;
+        -ms-transition: color 0.2s ease, text-shadow 0.2s ease;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    a:hover {
+        color: #ff7496;
+    }
+
+
+ol, ul {
+    padding-top: 5rem;
+    list-style: none;
+    text-align:center;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Footer */
+
+#footer {
+    -moz-align-self: -moz-flex-end;
+    -webkit-align-self: -webkit-flex-end;
+    -ms-align-self: -ms-flex-end;
+    align-self: flex-end;
+    width: 100%;
+    padding: 1.5em 0 0 0;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: default;
+    text-align: center;
+    height: 3rem;
+    display: inline-block;
+}
+
+    #footer .copyright {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 1.5em;
+        font-size: 1em;
+        list-style: none;
+    }
+
+        #footer .copyright li {
+            display: inline-block;
+            margin: 0 0 0 0.45em;
+            padding: 0 0 0 0.85em;
+            border-left: solid 1px rgba(255, 255, 255, 0.5);
+            line-height: 1;
+        }
+
+            #footer .copyright li:first-child {
+                border-left: 0;
+            }
+
+@media (max-width: 992px) {
+    #footer {
+        padding: 1.5em 0 0 0;
+        color: rgba(255, 255, 255, 0.75);
+        cursor: default;
+        text-align: center;
+        height: 3rem;
+        display: inline-block;
+    }
+
+        #footer .copyright {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 1.5em;
+            font-size: 1em;
+            list-style: none;
+        }
+
+            #footer .copyright li {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                border-left: none;
+                line-height: 1;
+            }
+
+                #footer .copyright li:first-child {
+                    border-left: 0;
+                }
+    ul li {
+        padding-left: 0;
+    }
+}
+/* List */
+
+ol {
+    list-style: decimal;
+    margin: 0 0 1.5em 0;
+    padding-left: 1.25em;
+}
+
+    ol li {
+        padding-left: 0.25em;
+    }
+
+ul {
+    list-style: disc;
+    margin: 0 0 1.5em 0;
+    padding-left: 1em;
+}
+
+    ul li {
+        padding-left: 0.5em;
+    }
+
+    ul.alt {
+        list-style: none;
+        padding-left: 0;
+    }
+
+        ul.alt li {
+            border-top: solid 1px #c8cccf;
+            padding: 0.5em 0;
+        }
+
+            ul.alt li:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+
+    ul.icons {
+        cursor: default;
+        list-style: none;
+        padding-left: 0;
+        margin-top: -0.675em;
+    }
+
+        ul.icons li {
+            display: inline-block;
+            padding: 0.675em 0.5em;
+        }
+
+            ul.icons li a {
+                text-decoration: none;
+                position: relative;
+                display: block;
+                width: 3.75em;
+                height: 3.75em;
+                border-radius: 100%;
+                border: solid 1px #c8cccf;
+                line-height: 3.75em;
+                overflow: hidden;
+                text-align: center;
+                text-indent: 3.75em;
+                white-space: nowrap;
+            }
+
+                ul.icons li a:before {
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-transform: none !important;
+                }
+
+                ul.icons li a:before {
+                    color: #ffffff;
+                    text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+                }
+
+                ul.icons li a:hover:before {
+                    text-shadow: 1.25px 0px 0px #01a2ff, -1.25px 0px 0px #01a2ff, 0px 1.25px 0px #01a2ff, 0px -1.25px 0px #01a2ff;
+                }
+
+                ul.icons li a:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: inherit;
+                    height: inherit;
+                    font-size: 1.85rem;
+                    line-height: inherit;
+                    text-align: center;
+                    text-indent: 0;
+                }
+
+                ul.icons li a:hover {
+                    border-color: #01a2ff;
+                }
+
+        @media screen and (max-width: 480px) {
+
+            ul.icons li a:before {
+                font-size: 1.5rem;
+            }
+
+        }
+
+    ul.actions {
+        cursor: default;
+        list-style: none;
+        padding-left: 0;
+    }
+
+        ul.actions li {
+            display: inline-block;
+            padding: 0 0.75em 0 0;
+            vertical-align: middle;
+        }
+
+            ul.actions li:last-child {
+                padding-right: 0;
+            }
+
+dl {
+    margin: 0 0 1.5em 0;
+}
+
+    dl dt {
+        display: block;
+        margin: 0 0 0.75em 0;
+    }
+
+    dl dd {
+        margin-left: 1.5em;
+    }
