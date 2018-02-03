@@ -5,13 +5,12 @@ $(document).ready(function(){
 
 function gethitokoto() {
     $.ajax({
-        url: "https://api.lwl12.com/hitokoto/main/get?encode=json",
+        url: "https://api.a632079.me/?encode=json",
         dataType: "jsonp",
         async: true,
         jsonp: "callback",
         jsonpCallback: "echokoto",
         success: function(result) {
-        	//console.log(result.hitokoto);
             write(result.hitokoto);
         },
         error: function() {
