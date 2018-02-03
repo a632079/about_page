@@ -4,15 +4,30 @@ html, body, div, p {
     margin: 0;
     font: inherit;
 }
-body{
+#body {
     font-family: "Lucida Grande", Lucida Sans Unicode, WenQuanYi Micro Hei, Verdana, Aril, Dengxian, Hiragino Sans GB, sans-serif;
     -webkit-font-smoothing: antialiased;
     height:100%;
-    background-image: url("bg.jpg");
-    background-repeat:no-repeat;
-    background-position:center;
-    background-attachment:fixed;
-
+}
+.bg {
+    background-repeat: no-repeat no-repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+    position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+.bg::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 p{
     text-align: center;
