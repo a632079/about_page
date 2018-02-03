@@ -48,7 +48,7 @@ h2{
 }
 .mainbox{
     height: 30rem;
-    background-color:white;
+    background-color:rgba(255,255,255,0);
     padding: 0;
 }
 .loading{
@@ -65,12 +65,12 @@ h2{
     z-index: 100;
 }
 #left-box{
-    background-color: dimgray;
+    background-color: rgba(102, 102, 102, 0.85);
     height: 100%;
     padding: 0;
 }
 #right-box{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     height: 100%;
     padding: 0;
 }
@@ -156,7 +156,6 @@ h2{
 }
 
 /* icon flash */
-
 a {
     -moz-transition: color 0.2s ease, border-color 0.2s ease;
     -webkit-transition: color 0.2s ease, border-color 0.2s ease;
@@ -339,6 +338,7 @@ ul {
                 }
 
                 ul.icons li a:before {
+                    color: rgba(255, 255, 255, 0.65);
                     position: absolute;
                     top: 0;
                     left: 0;

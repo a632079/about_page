@@ -39,8 +39,13 @@ var imgArray = [
 	"https://piccdn.freejishu.com/images/2016/04/27/c40ab2d44e9e25519b245e26b565498a.jpg",
 	"https://piccdn.freejishu.com/images/2017/09/04/qAuQB.jpg",
 	"https://piccdn.freejishu.com/images/2016/04/04/41795-106.jpg",
-	"https://piccdn.freejishu.com/images/2016/04/04/1173409.jpg",
 	"https://piccdn.freejishu.com/images/2016/04/04/1057060.jpg"
 ];
 var index = RandomNum(0, imgArray.length - 1)
-$('.bg').css('background-image', "url(" + "\"" + imgArray[index]+ "\")")
+var img = new Image();
+img.src = imgArray[index];
+console.log('开始加载背景图像:', imgArray[index]);
+img.onload = function() {
+    $('.bg').css('background-image', "url(" + "\"" + imgArray[index]+ "\")")
+	console.log('加载完成！');
+}
